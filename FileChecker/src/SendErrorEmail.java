@@ -11,17 +11,17 @@ import javax.mail.internet.MimeMessage;
 public class SendErrorEmail implements Runnable {
 	public SendErrorEmail() {
 		Properties props = new Properties();
-		props.put("mail.smtp.host", "192.168.101.180");
-		props.put("mail.smtp.socketFactory.port", "25");
+		props.put(//host ip);
+		props.put(//host port);
 
 		Session session = Session.getDefaultInstance(props);
 
 		try {
 
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("msauceda@jonsmarketplace.com"));
+			message.setFrom(new InternetAddress(//email goes here));
 			message.setRecipients(Message.RecipientType.TO,
-					InternetAddress.parse("msauceda@jonsmarketplace.com"));
+					InternetAddress.parse(//email goes here));
 			message.setSubject("ERROR FILE NOT FOUND");
 			message.setText("Authfile.DAT was not found" + "\n\n -File Checker");
 
