@@ -10,7 +10,7 @@ public class FileStatus {
 	public boolean checkFileStatus() {
 		Scanner fileCheckScanner = null;
 		try {
-			fileCheckScanner = new Scanner(new File("k:/authfile.dat"));
+			fileCheckScanner = new Scanner(new File(//file you are looking for));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			return false;
